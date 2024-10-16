@@ -19,8 +19,8 @@ if [ "$1" == php-fpm ]; then
     fi
 
     cd /var/www/control/application/config;
-    # cp config-sample.php config.php;
-    # cp constants-sample.php constants.php;
+    cp config-sample.php config.php;
+    cp constants-sample.php constants.php;
     # sed -i -e "/base_url/s/= '[^\s]*'/= \$_SERVER['BASE_URL']/" config.php;
     #cp database-example.php database.php;
     cp mongodb-sample.php mongodb.php;
