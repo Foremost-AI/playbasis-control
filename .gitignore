@@ -1,3 +1,7 @@
+*.swp
+*.swo
+*.swm
+*.bak
 .DS_Store
 
 application/config/config.php
