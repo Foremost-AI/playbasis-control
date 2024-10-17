@@ -125,6 +125,7 @@ class Action extends MY_Controller
 
                             $data_admin = $this->input->post();
                             $data_admin['action_id'] = $this->Action_model->addAction($data);
+                            $data_admin['client_id'] = $data['client_id'];
                             $data_admin['site_id'] = $data['site_id'];
                             $sites = $this->App_model->getAppsByClientId($data_admin);
 
