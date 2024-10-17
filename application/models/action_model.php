@@ -347,7 +347,8 @@ class Action_model extends MY_Model
     public function getAllIcons()
     {
 
-        $handle = fopen(base_url('stylesheet/custom/font-awesome.css'), 'r');
+        $url = str_replace($this->config->item('base_url'), $this->config->item('nginx_url'), base_url('stylesheet/custom/font-awesome.css'));
+        $handle = fopen($url, 'r');
         $all_icons = array();
 
         if ($handle) {
