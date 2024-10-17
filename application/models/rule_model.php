@@ -218,7 +218,7 @@ class Rule_model extends MY_Model
         try {
             if (count($ds) > 0) {
                 foreach ($ds as &$rowx) {
-                    $rowx['specific_id'] = $rowx['reward_id'] . "";
+                    $rowx['specific_id'] = $rowx[$clientId ? 'reward_id' : '_id'] . "";
                     $rowx['name'] = htmlspecialchars($rowx['name'], ENT_QUOTES);
                     $rowx['description'] = htmlspecialchars($rowx['description'], ENT_QUOTES);
                     $rowx['dataSet'] = isset($rowx['init_dataset']) ? $rowx['init_dataset'] : null;

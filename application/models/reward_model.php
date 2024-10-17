@@ -69,7 +69,7 @@ class Reward_model extends MY_Model
             $limit = $this->getRewardLimitByRewardId($data['plan_id'], $result['_id']);
 
             $reward_data[] = array(
-                'reward_id' => $result['reward_id'],
+                'reward_id' => $result['_id'],
                 'name' => $result['name'],
                 'description' => $result['description'],
                 'limit' => $limit,
