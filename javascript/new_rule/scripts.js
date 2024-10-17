@@ -316,7 +316,8 @@ $(function(){
             $('#rule-masonry').append( template(data) );
             initRuleIsotopes( $('#rule-masonry') );
         },
-        error : function() {
+        error : function(e) {
+            console.error(e);
             dialogMsg = 'Cannot load rule from server,\n Please try again later';
             return false;
         },

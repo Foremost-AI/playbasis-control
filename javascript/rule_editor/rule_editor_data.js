@@ -83,7 +83,8 @@ dataMan = {
 
               dialogMsg = 'Rules Table load successful';
           },
-          error:function(){
+          error:function(e){
+              console.error(e);
               dialogMsg = 'Cannot load rule from server,\n Please try again later';
               return false;
           },
@@ -119,7 +120,8 @@ dataMan = {
               oneRuleMan.oneRuleFromJSON(data)
 
           },
-          error:function(){
+          error:function(e){
+            console.error(e);
             dialogMsg = 'Cannot load rule from server,\n Please try again later';
             return false;
           },
