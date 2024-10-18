@@ -18,7 +18,7 @@ class PlaybasisApi
         $ci =& get_instance();
 
         $this->_restClient = $ci->rest;
-        $this->_restClient->initialize(array('server' => API_SERVER));
+        $this->_restClient->initialize(array('server' => NGINX_API_SERVER));
 
         //set_error_handler('handleError');
     }

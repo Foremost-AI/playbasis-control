@@ -75,7 +75,9 @@ define('EMAIL_FROM', 'no-reply@playbasis.com');
 define('NUMBER_OF_ADJACENT_PAGES', 6);
 define('NUMBER_OF_RECORDS_PER_PAGE', 10);
 
+//define('API_SERVER', 'https://api.pbapp.net');
 define('API_SERVER', 'http://localhost');
+define('NGINX_API_SERVER', 'http://host.docker.internal');
 define('NODE_SERVER', 'https://node.pbapp.net');
 define('WIDGET_SERVER', 'widget.pbapp.net');
 
