@@ -100,7 +100,12 @@ class Rule_model extends MY_Model
         try {
             if (count($results) > 0) {
                 foreach ($results as &$rowx) {
-                    $jigsaw_id = strval($rowx['jigsaw_id']);
+                    if (!$clientId) // default action use _id instead
+                    {
+                        $rowx["jigsaw_id"] = $rowx["_id"];
+                    }
+                    $rowx['jigsaw_id'] = $rowx['jigsaw_id'] . "";
+                    $jigsaw_id = $rowx['jigsaw_id'];
                     $rowx['id'] = $jigsaw_id;
                     $rowx['name'] = htmlspecialchars($rowx['name'], ENT_QUOTES);
                     if($rowx['name'] != "specialRewardCondition"){
