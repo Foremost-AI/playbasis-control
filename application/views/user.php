@@ -63,7 +63,7 @@
                                 <input type="checkbox" name="selected[]" value="<?php echo $user['_id']; ?>" />
                                 <?php } ?></td>
                             <td class="left"><?php echo $user['username']; ?></td>
-                            <td class="right"><?php echo ($user['user_group'])? $user['user_group'] : $this->lang->line('text_default_admin'); ?></td>
+                            <td class="right"><?php echo isset($user['user_group']) && $user['user_group'] ? $user['user_group'] : $this->lang->line('text_default_admin'); ?></td>
                             <td class="right"><?php echo ($user['status'])? "Enabled" : "Disabled"; ?></td>
                             <td class="right"><?php echo datetimeMongotoReadable($user['date_added']); ?></td>
                             <td class="right">
