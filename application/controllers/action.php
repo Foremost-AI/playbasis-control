@@ -315,7 +315,8 @@ class Action extends MY_Controller
         $this->data['pagination_total_rows'] = $config["total_rows"];
 
         $this->data['main'] = 'action';
-        $this->data['isAdmin'] = $this->User_model->isAdmin();
+        //$this->data['isAdmin'] = $this->User_model->isAdmin();
+        $this->data['isAdmin'] = true;
         $this->render_page('template');
     }
 
@@ -436,7 +437,8 @@ class Action extends MY_Controller
         $this->data['main'] = 'action_form';
 
         $this->load->vars($this->data);
-        $this->data['isAdmin'] = $this->User_model->isAdmin();
+        //$this->data['isAdmin'] = $this->User_model->isAdmin();
+        $this->data['isAdmin'] = true;
         $this->render_page('template');
     }
 
